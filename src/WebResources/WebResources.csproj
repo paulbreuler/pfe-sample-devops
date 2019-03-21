@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dist\**" />
+    <None Remove="node_modules\**" />
+    <None Remove="package-lock.json" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command=".\node_modules\.bin\webpack --mode=development" Condition="'$(Configuration)'=='Debug'" />
+    <Exec Command=".\node_modules\.bin\webpack --mode=production" Condition="'$(Configuration)'=='Release'" />
+  </Target>
+
+</Project>

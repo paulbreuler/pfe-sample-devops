@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "lib": [
+      "dom",
+      "es2015",
+      "es2015.promise"
+    ],
+    "target": "es5",
+    "strict": true,
+    "allowJs": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  }
+}

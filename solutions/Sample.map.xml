@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mapping>
+    <FileToFile map="PFESamplePlugins.dll" to="..\..\src\\Plugins\bin\**\PFE.Sample.Plugins.dll" />
+
+    <FileToPath map="WebResources\*.*" to="..\..\src\WebResources\dist\**" />
+    <FileToPath map="WebResources\**\*.*" to="..\..\src\WebResources\dist\**" />
+</Mapping>
