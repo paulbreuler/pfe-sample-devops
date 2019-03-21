@@ -10,13 +10,9 @@ obj
 [Dd]ebug
 [Rr]elease
 dist
-<<<<<<< HEAD
 src/WebResources/src/**/*.js
 src/WebResources/src/**/*.map
 src/WebResources/dist
-=======
-src/WebResources/**/*.js
->>>>>>> upstream/master
 
 # Packages
 packages

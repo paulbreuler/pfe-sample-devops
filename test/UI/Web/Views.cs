@@ -22,11 +22,7 @@ namespace UI.Tests
                 xrmBrowser.LoginPage.Login(_uri, _username, _password);
                 xrmBrowser.GuidedHelp.CloseGuidedHelp();
 
-<<<<<<< HEAD
                 xrmBrowser.Navigation.OpenSubArea("Account Management", "Accounts");
-=======
-                xrmBrowser.Navigation.OpenSubArea("Sales", "Accounts");
->>>>>>> upstream/master
                 xrmBrowser.Grid.SwitchView("Active Accounts");
 
             }

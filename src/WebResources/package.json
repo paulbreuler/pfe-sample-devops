@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Sample WebResources",
   "dependencies": {
-    "@types/xrm": "^9.0.7"
+    "@types/xrm": "^9.0.12"
   },
   "devDependencies": {
-    "ts-loader": "^5.3.0",
-    "typescript": "^3.1.6",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.4000",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.29.6",
-    "webpack-cli": "3.1.2"
+    "webpack-cli": "^3.3.0"
   },
   "author": "",
   "license": "ISC"

@@ -25,15 +25,6 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\Common\Cache\index.js" />
-    <Compile Include="src\Common\index.js" />
-    <Compile Include="src\Common\Security\index.js" />
-    <Compile Include="src\Forms\Account\index.js" />
-    <Compile Include="src\Forms\Contact\index.js" />
-    <Compile Include="src\Forms\index.js" />
-    <Compile Include="src\Ribbons\Account\index.js" />
-    <Compile Include="src\Ribbons\Contact\index.js" />
-    <Compile Include="src\Ribbons\index.js" />
     <Compile Include="webpack.config.js">
       <SubType>Code</SubType>
     </Compile>
