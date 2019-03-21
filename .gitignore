@@ -9,6 +9,8 @@ bin
 obj
 [Dd]ebug
 [Rr]elease
+
+# JavaScript
 dist
 src/WebResources/src/**/*.js
 src/WebResources/src/**/*.map
@@ -17,3 +19,6 @@ src/WebResources/dist
 # Packages
 packages
 node_modules
+
+# Local config files
+**/local.runsettings

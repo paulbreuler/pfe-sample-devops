@@ -9,20 +9,37 @@ namespace UI.Tests
     [TestClass]
     public class Views
     {
-        private readonly SecureString _username = System.Configuration.ConfigurationManager.AppSettings["OnlineUsername"].ToSecureString();
-        private readonly SecureString _password = System.Configuration.ConfigurationManager.AppSettings["OnlinePassword"].ToSecureString();
-        private readonly Uri _uri = new Uri(System.Configuration.ConfigurationManager.AppSettings["OnlineCrmUrl"].ToString());
+        private static SecureString _username;
+        private static SecureString _password;
+        private static Uri _uri;
+
+        public static BrowserOptions _options;
+
+        [ClassInitialize]
+        public static void SetupTests(TestContext testContext)
+        {
+            _username = testContext.Properties["upn"].ToString().ToSecureString();
+            _password = testContext.Properties["password"].ToString().ToSecureString();
+            _uri = new Uri(testContext.Properties["orgUrl"].ToString());
+
+            _options = new BrowserOptions
+            {
+                BrowserType = (BrowserType)Enum.Parse(typeof(BrowserType), testContext.Properties["browserType"].ToString()),
+                PrivateMode = true,
+                FireEvents = true,
+                Headless = false,
+                UserAgent = false
+            };
+        }
 
         [TestMethod]
         public void SwitchView()
         {
-            using (var xrmBrowser = new Browser(TestSettings.Options))
+            using (var xrmBrowser = new Browser(_options))
             {
-
                 xrmBrowser.LoginPage.Login(_uri, _username, _password);
-                xrmBrowser.GuidedHelp.CloseGuidedHelp();
+                //xrmBrowser.GuidedHelp.CloseGuidedHelp();
 
-                xrmBrowser.Navigation.OpenSubArea("Account Management", "Accounts");
                 xrmBrowser.Grid.SwitchView("Active Accounts");
 
             }

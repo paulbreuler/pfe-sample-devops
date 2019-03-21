@@ -70,12 +70,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestSettings.cs" />
     <Compile Include="Web\Views.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="local.runsettings" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

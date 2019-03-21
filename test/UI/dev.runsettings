@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>
+    <Parameter name="orgUrl" value="https://codev1.crm.dynamics.com/main.aspx?appid=df849f43-514b-e911-a981-000d3a3ab637" />
+    <Parameter name="upn" value="paul@codev1.onmicrosoft.com" />
+    <Parameter name="password" value="####" />
+	<Parameter name="browserType" value="Chrome" />
+  </TestRunParameters>  
+</RunSettings>
