@@ -33,16 +33,26 @@ namespace UI.Tests
         }
 
         [TestMethod]
-        public void SwitchView()
+        public void Login()
         {
             using (var xrmBrowser = new Browser(_options))
             {
                 xrmBrowser.LoginPage.Login(_uri, _username, _password);
-                //xrmBrowser.GuidedHelp.CloseGuidedHelp();
-
-                xrmBrowser.Grid.SwitchView("Active Accounts");
-
             }
         }
+
+        // EasyRepro does not currently support the latest UCI in v9.1.x
+        //[TestMethod]
+        //public void SwitchView()
+        //{
+        //    using (var xrmBrowser = new Browser(_options))
+        //    {
+        //        xrmBrowser.LoginPage.Login(_uri, _username, _password);
+        //        //xrmBrowser.GuidedHelp.CloseGuidedHelp();
+
+        //        xrmBrowser.Grid.SwitchView("Active Accounts");
+
+        //    }
+        //}
     }
 }
