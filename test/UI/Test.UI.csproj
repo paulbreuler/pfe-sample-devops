@@ -74,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="dev.runsettings" />
     <None Include="local.runsettings" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
