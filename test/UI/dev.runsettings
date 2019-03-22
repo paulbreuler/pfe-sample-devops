@@ -5,6 +5,6 @@
     <Parameter name="orgUrl" value="https://codev1.crm.dynamics.com/main.aspx?appid=df849f43-514b-e911-a981-000d3a3ab637" />
     <Parameter name="upn" value="paul@codev1.onmicrosoft.com" />
     <Parameter name="password" value="####" />
-	<Parameter name="browserType" value="Chrome" />
+	  <Parameter name="browserType" value="Chrome" />
   </TestRunParameters>  
 </RunSettings>
