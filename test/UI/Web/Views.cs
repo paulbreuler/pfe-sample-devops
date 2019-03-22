@@ -1,4 +1,5 @@
 ﻿using Microsoft.Dynamics365.UIAutomation.Api;
+using Microsoft.Dynamics365.UIAutomation.Api.UCI;
 using Microsoft.Dynamics365.UIAutomation.Browser;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -42,17 +43,17 @@ namespace UI.Tests
         }
 
         // EasyRepro does not currently support the latest UCI in v9.1.x
-        //[TestMethod]
-        //public void SwitchView()
-        //{
-        //    using (var xrmBrowser = new Browser(_options))
-        //    {
-        //        xrmBrowser.LoginPage.Login(_uri, _username, _password);
-        //        //xrmBrowser.GuidedHelp.CloseGuidedHelp();
+        [TestMethod]
+        public void SwitchView()
+        {
+            WebClient client = new WebClient(_options);
+            using (var xrmApp = new XrmApp(client))
+            {
+                xrmApp.OnlineLogin.Login(_uri, _username, _password);
+                xrmApp.Navigation.OpenApp("Sample App");
 
-        //        xrmBrowser.Grid.SwitchView("Active Accounts");
-
-        //    }
-        //}
+                xrmApp.Grid.SwitchView("Active Accounts");
+            }
+        }
     }
 }

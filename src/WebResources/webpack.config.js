@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     optimization: {
         minimizer: [new UglifyJsPlugin({
-            cache: './src/common/cache/index.ts',
+            cache: './src/common/cache/index.ts'
         })]
     },
     entry: {
