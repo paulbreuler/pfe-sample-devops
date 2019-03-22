@@ -11,7 +11,7 @@ resources:
   repositories:
     - repository: templates
       type: git
-      name: pfe-devops-sample-pipelines 
+      name: pfe-devops-sample-pipelines
 
 jobs:
 - template: jobs/build-source-pack-solution.yml@templates
