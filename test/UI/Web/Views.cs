@@ -33,6 +33,9 @@ namespace UI.Tests
             };
         }
 
+        /// <summary>
+        /// Login failing in current build of EasyRepo (v9.1 release branch) See issue: https://github.com/Microsoft/EasyRepro/issues/426
+        /// </summary>
         [TestMethod]
         public void Login()
         {
