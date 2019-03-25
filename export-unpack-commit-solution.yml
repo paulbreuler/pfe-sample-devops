@@ -1,0 +1,14 @@
+    
+name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
+
+trigger:
+- none
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: pfe-devops-sample-pipelines 
+
+jobs:
+- template: jobs/export-unpack-commit-solution.yml@templates
