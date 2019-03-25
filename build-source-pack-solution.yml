@@ -4,14 +4,11 @@ name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
 trigger:
 - development
 
-pool:
-  vmImage: 'vs2017-win2016'
-
 resources:
   repositories:
     - repository: templates
       type: git
-      name: pfe-devops-sample-pipelines 
+      name: pfe-devops-sample-pipelines
 
 jobs:
 - template: jobs/build-source-pack-solution.yml@templates
